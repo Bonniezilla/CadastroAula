@@ -7,11 +7,50 @@
     <title>Deletar Cadastro</title>
 </head>
 <body>
-    <h1>DELETAR</h1>
-    <hr>
-    <br>
-    <form action="processa_deletar.php" method="post">
+    <div align="center">
+        <h1>DELETAR</h1>
+        <hr>
+        <br>
+        <?php
+        if(isset($_POST['nome']) && ($_POST['nome'] != "")) {
+            include_once 'conexao.inc.php';
 
-    </form>
+            $query = "SELECT nome, idade FROM tabcliente00 WHERE nome = '{$_POST['nome']}'";
+
+            $result = mysqli_query($con, $query);
+
+            if(mysqli_num_rows($result) > 0) {
+            ?>
+                <form action="processa_deletar.php" method="post">
+                    <p>
+                        <input type="text" name="nome">
+                    </p>
+                    <p>
+                        <input type="submit" value="Deletar Cadastro">
+                    </p>
+                </form>
+                <?php
+            } else {
+                echo "Erro - Não possível achar seu cadastro";
+                ?>
+                <form action="deletar.html">
+                <p>
+                    <input type="submit" value="Voltar a página anterior">
+                </p>
+            </form>
+            <?php
+            }
+        } else {
+                echo "Erro - Insira um nome<br>";
+                ?>
+                    <form action="deletar.html">
+                        <p>
+                            <input type="submit" value="Voltar a página anterior">
+                        </p>
+                    </form>
+                <?php
+            }
+        ?>
+    </div>
 </body>
 </html>

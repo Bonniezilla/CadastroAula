@@ -13,7 +13,7 @@
             <hr>
             <br>
             <?php
-            if(isset($_POST['nome'])) {
+            if(isset($_POST['nome']) && ($_POST['nome'] != "")) {
                 include_once 'conexao.inc.php';
                 
                 $query = "SELECT nome, idade from tabcliente00 where nome = '{$_POST['nome']}'";
@@ -39,6 +39,11 @@
                 }
             } else {
                 echo "Insira um nome<br>";
+                ?>
+                <form action="alterar.html">
+                    <input type="submit" value="Voltar a página anterior">
+                </form>
+                <?php
             }
                     ?>
         </div>
