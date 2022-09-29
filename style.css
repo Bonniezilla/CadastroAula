@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    background: white;
+    align-items: center;
+    height: 60vh;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.main hr {
+    position: relative;
+    width: 100%;
+}
