@@ -1,8 +1,8 @@
 <?php
 
-    if(isset($_POST['nome']) && ($_POST['nome'] != "")) {
+    if(isset($_COOKIE['nome']) && ($_COOKIE['nome'] != "")) {
         include_once "conexao.inc.php";
-        $nomeAnterior = $_POST['nomeAnterior'];
+        $nomeAnterior = $_COOKIE['nome'];
         $nome = $_POST['nome'];
         $idade = $_POST['idade'];
 

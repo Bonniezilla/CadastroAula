@@ -24,13 +24,15 @@
                     $dados = mysqli_fetch_assoc($result);
                     ?>
             <form action="processa_altera.php" method="post">
-                <input type="hidden" name="nomeAnterior" value="<?= $dados['nome']; ?>">
                 <p>
                     Nome: <input type="text" name="nome" value="<?= $dados['nome']; ?>">
-                    </p>
+                </p>
+                <?php
+                    setcookie('nome', $_POST['nome']);
+                ?>
                 <p>
                     Idade: <input type="text" name="idade" value="<?= $dados['idade']; ?>">
-                    </p>
+                </p>
                     <input type="submit" value="Alterar">
                     </form>
                     <?php
@@ -45,7 +47,7 @@
                 </form>
                 <?php
             }
-                    ?>
+                ?>
         </div>
     </body>
 </html>

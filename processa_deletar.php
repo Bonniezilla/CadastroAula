@@ -5,7 +5,9 @@
         $query = "DELETE FROM tabcliente00 WHERE nome = '{$_POST['nome']}'";
 
         $result = mysqli_query($con, $query);
+        
+        echo "Cadastro deletado com sucesso";
     } else {
-        echo ""
+        echo "Erro - Dados não válidos";
     }
 ?>
