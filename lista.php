@@ -30,11 +30,14 @@
             <td><?= $linha['nome']; ?></td>
             <td align="center"><?= $linha['idade']; ?> </td>
         <tr>
-        <?php
+            <?php
     }
-
-?>
+    
+    ?>
             </table>
         </div>
+        <form action="cadastro.html">
+            <button>Voltar para a página principal</button>
+        </form>
     </body>
 </html>

@@ -45,7 +45,7 @@
                 ?>
                     <form action="deletar.html">
                         <p>
-                            <input type="submit" value="Voltar a página anterior">
+                            <button>Voltar para a página principal</button>
                         </p>
                     </form>
                 <?php

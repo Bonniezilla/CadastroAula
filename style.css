@@ -15,13 +15,13 @@ body {
 
 .main {
     background: white;
-    align-items: center;
-    height: 60vh;
-    width: 550px;
+    height: 70vh;
+    width: 500px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    align-items: center;
 }
+
 .main hr {
     position: relative;
     width: 100%;

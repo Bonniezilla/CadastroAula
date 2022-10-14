@@ -27,7 +27,7 @@
 </head>
 <body>
     <form action="cadastro.html">
-        <input type="submit" value="Voltar para a página principal">
+        <button>Voltar para a página principal</button>
     </form>
 </body>
 </html>

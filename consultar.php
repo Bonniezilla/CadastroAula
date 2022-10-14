@@ -37,13 +37,15 @@
 }
     ?>
         </table>
-        <hr>
         <br>
         <form action="consultar.php" method="post">
             <p>
                 Nome: <input type="text" name="cnome">
             </p>
             <input type="submit" value="Consultar Cadastro">
+        </form>
+        <form action="cadastro.html">
+            <button>Voltar para a página principal</button>
         </form>
     </body>
 </html>

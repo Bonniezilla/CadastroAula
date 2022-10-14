@@ -23,7 +23,7 @@
                 if(mysqli_num_rows($result) > 0) {
                     $dados = mysqli_fetch_assoc($result);
                     ?>
-            <form action="processa_altera.php" method="post">
+            <form class="form" action="processa_altera.php" method="post">
                 <p>
                     Nome: <input type="text" name="nome" value="<?= $dados['nome']; ?>">
                 </p>
@@ -33,21 +33,19 @@
                 <p>
                     Idade: <input type="text" name="idade" value="<?= $dados['idade']; ?>">
                 </p>
-                    <input type="submit" value="Alterar">
-                    </form>
-                    <?php
+                    <button>Alterar</button>
+            </form>
+                <?php
                 } else {
                     echo "Nome não encontrado";
                 }
             } else {
                 echo "Insira um nome<br>";
                 ?>
-                <form action="alterar.html">
-                    <input type="submit" value="Voltar a página anterior">
-                </form>
                 <?php
             }
-                ?>
+            ?>
+            <button id="buttonEl">Voltar para a página principal</button>
         </div>
     </body>
 </html>
